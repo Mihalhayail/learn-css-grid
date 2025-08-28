@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Gallery</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 20px;
+    }
+    body {
+      background-color: #ddd;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .gallery {
+      width: 80%;
+      margin: auto;
+      border: 10px solid red;
+      list-style: none;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, min-max(150px, 1fr));
+    }
+  </style>
+  <body>
+    <h2>My Gallery</h2>
+    <ul class="gallery">
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="gambar-ai.jpg" alt="" /></li>
+      <li><img src="1gambar-ai.jpg" alt="" /></li>
+    </ul>
+  </body>
+</html>
