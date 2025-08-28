@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Card</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav class="px-10 py-5"></nav>
+    <div
+      id="posts-container"
+      class="w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-10 cursor-pointer"
+    >
+    <script>
+      fetch("posts.json")
+        .then((res) => res.json())
+        .then((posts) => {
+          const container = document.getElementById("posts-container");
+
+          posts.forEach((post) => {
+            container.innerHTML += `
+            <div class="z-10 relative flex justify-center items-start flex-col bg-gray-400 group py-20 px-5 md:py-2 aspect-video overflow-hidden">
+              <!-- Thumbnail -->
+              <img 
+                src="${post.thumbnail}" 
+                alt="${post.title}"
+                class="absolute inset-0 w-full h-full object-cover bg-slate-950 opacity-10 group-hover:opacity-100 transition-all ease duration-500"
+              />
+
+              <!-- Label -->
+              <div class="absolute top-0 left-0 bg-gray-600 px-4 py-2">
+                <h4 class="text-white">${post.label}</h4>
+              </div>
+
+              <!-- Konten -->
+              <div class="transition-all ease duration-500 opacity-100 content text-center group-hover:opacity-0 z-10">
+                <h1 class="text-3xl font-bold mb-3">${post.title}</h1>
+                <p>
+                  ${
+                    post.desc[0].length > 100
+                      ? post.desc[0].slice(0, 100) + "..."
+                      : post.desc[0]
+                  }
+                </p>
+
+                <!-- Categories -->
+                <div class="flex justify-center items-center flex-row mt-5 flex-wrap">
+                  ${post.categories
+                    .map(
+                      (t) => `
+                    <span class="m-1 px-4 py-2 bg-gray-600 text-white">${t}</span>
+                  `
+                    )
+                    .join("")}
+                </div>
+              </div>
+            </div>
+          `;
+          });
+        })
+        .catch((err) => console.error("Gagal load JSON:", err));
+    </script>
+  </body>
+</html>

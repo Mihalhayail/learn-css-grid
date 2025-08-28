@@ -1,0 +1,38 @@
+[
+  {
+    "thumbnail": "gambar-ai.jpg",
+    "label": "AI",
+    "title": "Belajar Next.js untuk Pemula",
+    "desc": [
+      "Next.js adalah framework React untuk membangun aplikasi modern dengan mudah."
+    ],
+    "categories": ["AI"]
+  },
+  {
+    "thumbnail": "gambar-ai.jpg",
+    "label": "Sastra",
+    "title": "Mengenal Tailwind CSS",
+    "desc": [
+      "Tailwind CSS adalah utility-first framework yang mempermudah styling website."
+    ],
+    "categories": ["Sastra"]
+  },
+  {
+    "thumbnail": "gambar-ai.jpg",
+    "lebel": "Tech",
+    "title": "React vs Vue: Mana yang Lebih Baik?",
+    "desc": [
+      "React dan Vue adalah dua library populer untuk membangun UI interaktif."
+    ],
+    "categories": ["Tech"]
+  },
+  {
+    "thumbnail": "gambar-ai.jpg",
+    "label": "Filsafat",
+    "title": "Dasar-dasar JavaScript Modern",
+    "desc": [
+      "JavaScript adalah bahasa inti web development yang wajib dikuasai."
+    ],
+    "categories": ["Filsafat"]
+  }
+]
