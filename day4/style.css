@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: i fr minmax() 1fr;
+  grid-template-columns: 1fr minmax(100px, 300px) 1fr;
 }
 
 .items {
