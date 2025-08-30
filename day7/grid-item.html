@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Properti</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+
+      body {
+        background-color: #ddd;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        border: 2px solid red;
+        width: 90%;
+        margin: 1rem auto;
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        grid-template-columns: [satu] 1fr [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [b1] 1fr [b2] 1fr [b3] 1fr [b4];
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr; */
+        grid-template-areas:
+          "header header header"
+          "content content content";
+      }
+
+      .items {
+        background-color: rgb(255, 113, 113);
+      }
+
+      .ex {
+        /* grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4; */
+
+        /* grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: 4; */
+
+        /* grid-column-start: -2;
+        grid-column-end: -1;
+        grid-row-start: b2;
+        grid-row-end: b3; */
+
+        /* grid-column: 1 / span 2;
+        grid-row: 1 / span 2; */
+
+        /* grid-area: 1 / 1 / 2 / 4; */
+      }
+
+      .items:nth-child(even) {
+        background-color: rgb(92, 135, 234);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items ex">Contoh</div>
+      <div class="items">Item2</div>
+      <div class="items">Item3</div>
+      <div class="items">Item4</div>
+      <div class="items">Item5</div>
+      <div class="items">Item6</div>
+      <!-- <div class="items">Item7</div>
+      <div class="items">Item8</div>
+      <div class="items">Item9</div> -->
+    </div>
+  </body>
+</html>

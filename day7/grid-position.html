@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Properti</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+
+      body {
+        background-color: #ddd;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        border: 2px solid red;
+        width: 90%;
+        height: 200px;
+        margin: 1rem auto;
+        display: grid;
+        place-content: center;
+        gap: 1rem;
+        grid-template-columns: [satu] 1fr [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [b1] 1fr [b2] 1fr [b3] 1fr [b4];
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr; */
+        grid-template-areas:
+          "header header header"
+          "content content content";
+      }
+
+      .items {
+        background-color: rgb(255, 113, 113);
+        place-self: center end;
+      }
+
+      .ex {
+        justify-self: stretch;
+      }
+      .ux {
+        justify-self: stretch;
+      }
+      .items:nth-child(even) {
+        background-color: rgb(92, 135, 234);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="items ex">Items1</div>
+      <div class="items">Item2</div>
+      <div class="items">Item3</div>
+      <div class="items">Item4</div>
+      <div class="items ux">Item5</div>
+      <div class="items">Item6</div>
+      <div class="items">Item7</div>
+      <div class="items">Item8</div>
+      <div class="items ex">Item9</div>
+    </div>
+  </body>
+</html>
