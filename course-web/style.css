@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #fff8cc;
+  --secondary-color: #d45428;
+  --thirdty-color: #f4e9ad;
+  --text-color-1: #fff;
+  --text-color-2: #000;
+  --shadow: rgba(0, 0, 0, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-size: 18px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  margin: 50px;
+}
+
+/* Container */
